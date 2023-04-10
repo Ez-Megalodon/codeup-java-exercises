@@ -76,7 +76,7 @@ public class ControlFlowExercises {
 //                String userInput = sc.nextLine();
 //                boolean confirm = userInput.equalsIgnoreCase("y");
 //                if (confirm){
-//                    System.out.println("Please enter a integer that you would like to continue to.");
+//                    System.out.println("Please enter an integer that you would like to continue to.");
 //                    userNum = Integer.parseInt(sc.nextLine());
 //                }
 //
