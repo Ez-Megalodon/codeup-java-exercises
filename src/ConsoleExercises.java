@@ -1,8 +1,11 @@
 import java.util.Scanner;
+
 public class ConsoleExercises {
+
     public static void main(String[] args) {
+
         double pi = 3.14159;
-        System.out.printf("The value of pi is approximately %s: %n", pi);
+        System.out.printf("The value of pi is approximately %.2f: %n", pi);
         //Explore the Scanner Class.
         //1
         Scanner scanner = new Scanner(System.in);
@@ -27,14 +30,14 @@ public class ConsoleExercises {
         //Calculate the perimeter and area of Codeup's classrooms.
         //1
         System.out.println("Please enter the width (in footage)");
-        int width = Integer.parseInt(scanner.nextLine());
+        float width = Float.parseFloat(scanner.nextLine());
 
         System.out.println("Please enter the length (in footage)");
-        int length = Integer.parseInt(scanner.nextLine());
+        float length = Float.parseFloat(scanner.nextLine());
 
-        int perimeter = width * width + length * length;
-        int sqFootage = width * length;
-        System.out.printf("The square footage in your classroom is: %s sqft, %nThe perimeter length of the classroom is %s.", sqFootage, perimeter);
+        float perimeter = width * width + length * length;
+        float sqFootage = width * length;
+        System.out.printf("The square footage in your classroom is: %s sqft, %nThe perimeter length of the classroom is %s ft.", sqFootage, perimeter);
 
         //bonus (unfinished)
 //        Scanner scPeriod = new Scanner(System.in).useDelimiter("//.");
