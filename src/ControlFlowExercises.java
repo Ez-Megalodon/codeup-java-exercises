@@ -78,6 +78,8 @@ public class ControlFlowExercises {
 //                if (confirm){
 //                    System.out.println("Please enter an integer that you would like to continue to.");
 //                    userNum = Integer.parseInt(sc.nextLine());
+//                } else {
+//                    System.out.println("Thank you for playing");
 //                }
 //
 //            }
