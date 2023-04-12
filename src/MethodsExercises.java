@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class MethodsExercises {
 
     public static void main(String [] args){
+        //1
 //        int number1 = 10;
 //        int number2 = 5;
 //        System.out.println("add method: " + addMethod(number1, number2));
@@ -10,10 +11,18 @@ public class MethodsExercises {
 //        System.out.println("multiply method: " + multiplyMethod(number1,number2));
 //        System.out.println("divide method: " + divideMethod(number1, number2));
 //        System.out.println("modulus method: " + modulusMethod(number1, number2));
+
+        //1.bonus
 //        System.out.println("recursion multiply method: " + recursionMultiply(number1,number2));
+
+        //2
 //        int userNum = getUserInt(1, 10);
 //        System.out.println("User has entered: " + userNum);
+
+        //3
 //        getFactorial();
+
+        //4
 //        diceRoll();
 
     }
@@ -67,7 +76,7 @@ public class MethodsExercises {
         String multi = "1";
         for (int i = 1; i <= userNum; i++){
             if (i > 1){
-                multi = multi.concat(" * " + i);
+                multi = multi.concat(" x " + i);
             }
             result *= i;
         }
@@ -96,7 +105,7 @@ public class MethodsExercises {
                 confirm = sc.nextLine().trim().equalsIgnoreCase("y");
             }while (confirm);
 
-            System.out.println("Would you like to start over? [y/n]");
+            System.out.println("Would you like to try with new dice? [y/n]");
             boolean confirm2 = sc.nextLine().trim().equalsIgnoreCase("y");
             if (confirm2){
                 diceRoll();

@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class HighLow {
     public static void main (String[] args){
         guessGame();
-
     }
+
     public static void guessGame (){
         Scanner sc = new Scanner(System.in);
         int rand = randomNumber(1,100);
