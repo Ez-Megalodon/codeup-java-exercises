@@ -33,11 +33,5 @@ public class InputTest {
         System.out.printf("User entered: %.2f%n", input.getDouble(1, 10));
 
         System.out.printf("User entered: %.2f%n", input.getDouble(1, 10, "Please enter a 'double' number between 1 & 10."));
-
-
-
-
-
-
     }
 }

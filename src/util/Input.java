@@ -1,25 +1,24 @@
 package util;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Input {
-
     private Scanner scanner;
 
+    // initiate scanner tool for every input class created
     public Input() {
         this.scanner = new Scanner(System.in);
     }
-
+    // get user input string
     public String getString(){
         return this.scanner.nextLine();
     }
-
+    // get user input string with optional prompt
     public  String getString(String prompt){
         System.out.println(prompt);
         return this.scanner.nextLine();
     }
-
+    // confirm user action with [y/n] format
     public boolean yesNo(){
         String userInput = this.scanner.nextLine().trim();
         if (userInput.isEmpty() || userInput.equalsIgnoreCase("no") || userInput.equalsIgnoreCase("n")) {
@@ -27,7 +26,8 @@ public class Input {
         }
         return (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
     }
-
+    // confirm user action with [y/n] format
+    // optional prompt
     public boolean yesNo (String prompt){
         System.out.println(prompt);
         String userInput = this.scanner.nextLine().trim();
@@ -36,7 +36,7 @@ public class Input {
         }
         return (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
     }
-
+    // get user entered int from input
     public int getInt(){
         int userNum;
         do {
@@ -48,8 +48,8 @@ public class Input {
             }
         } while (true);
     }
-
-    //prompt version
+    // get user entered int from input
+    //optional prompt
     public int getInt (String prompt){
         int userNum;
         do {
@@ -62,7 +62,7 @@ public class Input {
             }
         } while (true);
     }
-
+    //get user int that is between a min and max integer
     public int getInt (int min, int max){
             int userNum;
             do {
@@ -79,7 +79,8 @@ public class Input {
                 }
             } while (true);
     }
-
+    //get user int that is between a min and max integer
+    // optional prompt
     public int getInt(int min, int max, String prompt) {
         int userNum;
         do {
@@ -97,8 +98,7 @@ public class Input {
             }
         } while (true);
     }
-
-
+    //get user entered double
     public double getDouble(){
         double userNum;
         do {
@@ -110,7 +110,8 @@ public class Input {
             }
         } while (true);
     }
-
+    //get user double
+    // optional prompt
     public double getDouble(String prompt){
         double userNum;
         do {
@@ -123,7 +124,7 @@ public class Input {
             }
         } while (true);
     }
-
+    //get user int that is between a min and max double
     public double getDouble(double min, double max){
         double userNum;
         do {
@@ -140,7 +141,8 @@ public class Input {
             }
         } while (true);
     }
-
+    //get user int that is between a min and max double
+    //optional prompt
     public double getDouble(double min, double max, String prompt) {
         double userNum;
         do {
