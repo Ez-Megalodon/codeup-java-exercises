@@ -2,24 +2,42 @@ package util;
 
 public class InputTest {
     public static void main(String[] args) {
+        Input input = new Input();
+        System.out.println("enter a string");
+        System.out.printf("user entered: %s%n",input.getString());
 
-        System.out.println("Enter a String.");
-        String userInput = Input.getString();
-        System.out.printf("user has entered: %s%n", userInput);
+        System.out.printf("user entered: %s%n",input.getString("Enter another string"));
 
-        int min = 1;
-        int max = 10;
-        System.out.printf("Enter a number between %d & %d%n", min, max);
-        int userNum = Input.getInt(min, max);
-        System.out.printf("user has entered %d", userNum);
+        System.out.println("continue? [y/n]");
+        System.out.printf("user selected: %b%n",input.yesNo());
 
-        double doubleMin = 1;
-        double doubleMax = 10;
-        System.out.printf("Enter a decimal number between %.2f & %.2f%n", doubleMin, doubleMax);
-        double userDoubleNum = Input.getDouble(doubleMin, doubleMax);
-        System.out.printf("user has entered %.2f", userDoubleNum);
+        boolean confirm = input.yesNo("continue? [y/n]");
+        System.out.printf("user selected: %b%n", confirm);
+
+        System.out.println("enter a integer");
+        System.out.printf("user entered: %d%n", input.getInt());
+
+        System.out.printf("user entered: %d%n", input.getInt("enter a integer"));
+
+        System.out.println("enter a integer between 1 and 10");
+        System.out.printf("user entered: %d%n", input.getInt(1, 10));
+
+        System.out.printf("user entered: %d%n", input.getInt(1, 10,"Enter a integer between 1 and 10" ));
+
+        System.out.println("Please enter a 'double' number.");
+        System.out.printf("User entered: %.2f%n", input.getDouble());
+
+        System.out.printf("User entered: %.2f%n", input.getDouble("Please enter a 'double' number."));
+
+        System.out.println("Please enter a 'double' number between 1 & 10.");
+        System.out.printf("User entered: %.2f%n", input.getDouble(1, 10));
+
+        System.out.printf("User entered: %.2f%n", input.getDouble(1, 10, "Please enter a 'double' number between 1 & 10."));
+
+
+
+
 
 
     }
-
 }
