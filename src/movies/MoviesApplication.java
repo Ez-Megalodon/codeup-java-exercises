@@ -20,6 +20,9 @@ public class MoviesApplication {
             System.out.println("Enter your choice:");
             String userChoice = input.getString();
 
+            if (Integer.parseInt(userChoice) == 0){
+                break;
+            }
             if (userChoice.equalsIgnoreCase("1")){
                 System.out.println("*/ All movies \\*");
                 for(Movie movie : MoviesArray.findAll()){
