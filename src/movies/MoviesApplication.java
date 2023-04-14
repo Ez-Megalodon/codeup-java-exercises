@@ -8,7 +8,7 @@ public class MoviesApplication {
         Input input = new Input();
         boolean userConfirm;
         do {
-            System.out.println("What would you like to do?\n\n");
+            System.out.println("What would you like to do?\n");
 
             System.out.println("0 - exit");
             System.out.println("1 - view all movies");
