@@ -1,3 +1,4 @@
+import  java.util.Arrays;
 public class Person {
     public static void main (String[]args){
         //1 - Object basics
@@ -51,6 +52,12 @@ public class Person {
 
     public Person(String name){
         this.name = name;
+    }
+
+    public static Person[] addPerson(Person[] personArray, Person newPerson){
+        Person[] newArray = Arrays.copyOf(personArray, personArray.length +1);
+        newArray[newArray.length - 1] = newPerson;
+        return newArray;
     }
 
 
