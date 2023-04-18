@@ -13,18 +13,17 @@ public class ShapesTest {
 //        System.out.println(box2.getPerimeter());
 //        System.out.println(box2.getArea());
 
-        Measurable myShape;
+        Quadrilateral myShape;
 
-        System.out.println("Rectangle");
         myShape = new Rectangle(5, 10);
-        System.out.println(myShape.getArea());
-        System.out.println(myShape.getPerimeter());
+        System.out.println("Rectangle Area => " + myShape.getArea());
+        System.out.println("Rectangle Perimeter => " + myShape.getPerimeter());
+        System.out.println("Rectangle Length => " + myShape.getLength());
 
-        System.out.println("Square");
         myShape = new Square(5);
-        System.out.println(myShape.getArea());
-        System.out.println(myShape.getPerimeter());
-        System.out.println();
+        System.out.println("\nSquare Area => " + myShape.getArea());
+        System.out.println("Square Perimeter => " + myShape.getPerimeter());
+        System.out.println("Square Length => " + myShape.getLength());
 
     }
 }
