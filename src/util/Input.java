@@ -18,7 +18,7 @@ public class Input {
         System.out.println(prompt);
         return this.scanner.nextLine();
     }
-    // confirm user action with [y/n] format
+    // confirm user action with [y/n] Input
     public boolean yesNo(){
         String userInput = this.scanner.nextLine().trim();
         if (userInput.isEmpty() || userInput.equalsIgnoreCase("no") || userInput.equalsIgnoreCase("n")) {
