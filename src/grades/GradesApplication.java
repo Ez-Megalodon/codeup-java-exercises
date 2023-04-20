@@ -2,7 +2,9 @@ package grades;
 
 import util.Input;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
@@ -14,36 +16,28 @@ public class GradesApplication {
 
         Student student1 = new Student();
         student1.setName("Ezra");
-        student1.addGrade(67);
-        student1.addGrade(89);
-        student1.addGrade(90);
+        student1.setGrades(new ArrayList<>(List.of(67,89,90)));
 //        System.out.printf("%s's grade average is: %.2f", student1.getName(),student1.getGradeAverage());
 
         Student student2 = new Student();
         student2.setName("Marc");
-        student2.addGrade(64);
-        student2.addGrade(87);
-        student2.addGrade(59);
+        student2.setGrades(new ArrayList<>(List.of(64,86,59)));
 //        System.out.printf("%n%s's grade average is: %.2f", student2.getName(),student2.getGradeAverage());
 
         Student student3 = new Student();
         student3.setName("Conner");
-        student3.addGrade(89);
-        student3.addGrade(88);
-        student3.addGrade(56);
+        student3.setGrades(new ArrayList<>(List.of(89,88,56)));
 //        System.out.printf("%n%s's grade average is: %.2f", student3.getName(),student3.getGradeAverage());
 
         Student student4 = new Student();
-        student4.setName("Matt-phew");
-        student4.addGrade(73);
-        student4.addGrade(79);
-        student4.addGrade(87);
+        student4.setName("Matt");
+        student4.setGrades(new ArrayList<>(List.of(73,79,87)));
 //        System.out.printf( "%n%s's grade average is: %.2f%n", student4.getName(),student4.getGradeAverage());
 
         students.put("Ez-Megalodon", student1);
         students.put("Marc-maximus", student2);
         students.put("Condor-plane", student3);
-        students.put("matt", student4);
+        students.put("matt-phew", student4);
 
 //        System.out.println(students.get("Ez-Megalodon").getName());
 //        System.out.println(students.get("Ez-Megalodon").getGradeAverage());
@@ -54,9 +48,8 @@ public class GradesApplication {
         AtomicReference<Double> total = new AtomicReference<>((double) 0);
         AtomicInteger i = new AtomicInteger();
 
+        System.out.println("Welcome!\n");
         do {
-
-            System.out.println("Welcome!\n");
             System.out.println("Here are the GitHub usernames of our students:\n");
 
             for (String key : students.keySet()) {
@@ -69,14 +62,14 @@ public class GradesApplication {
 
             userInput = input.getString();
             if (userInput.equalsIgnoreCase("1")){
-                System.out.println("------------------------");
-                System.out.println("|       Grades         |");
-                System.out.println("------------------------");
+                System.out.println("---------------------------");
+                System.out.println("|         Grades          |");
+                System.out.println("---------------------------");
                 students.forEach((key,value) ->{
-                    System.out.printf("| %-7s ",students.get(key).getName());
+                    System.out.printf("| %-10s ",students.get(key).getName());
                     System.out.printf("%s |%n", students.get(key).getGrades());
                 });
-                System.out.println("------------------------");
+                System.out.println("---------------------------");
 
                 userContinue = input.yesNo("\nWould you like to continue? [y/n]");
                 if (!userContinue){
@@ -108,7 +101,7 @@ public class GradesApplication {
                 System.out.println("|           Report            |");
                 System.out.println("-------------------------------");
                 students.forEach((key,value) ->{
-                    System.out.printf("| %-6s %-14s %.2f |%n",students.get(key).getName(), key, students.get(key).getGradeAverage());
+                    System.out.printf("| %-6s %-14s %-5.2f |%n",students.get(key).getName(), key, students.get(key).getGradeAverage());
                 });
                 System.out.println("-------------------------------");
 
@@ -142,6 +135,7 @@ public class GradesApplication {
             }
 
         } while (userContinue);
+
         System.out.println("Goodbye, and have a wonderful day!");
     }
 }
