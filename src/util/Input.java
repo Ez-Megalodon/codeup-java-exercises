@@ -160,4 +160,30 @@ public class Input {
             }
         } while (true);
     }
+
+    public int getBinary(String binaryString) {
+        try {
+            return Integer.valueOf(binaryString, 2);
+        } catch (NumberFormatException e) {
+            System.out.println("error: " + e);
+            System.out.println("Argument must be numbers to be converted to binary. i.e. 01010101\n");
+            System.out.println("Please enter numbers in binary format.");
+            String binaryString2 = scanner.nextLine();
+            getBinary(binaryString2);
+            return Integer.valueOf(binaryString2, 2);
+        }
+    }
+
+    public int getHex(String hexString) {
+        try {
+            return Integer.valueOf(hexString, 16);
+        } catch (NumberFormatException e){
+            System.out.println("error: " + e);
+            System.out.println("Argument must be able to be converted to hexadecimal format\n");
+            System.out.println("Please enter a number in Hexadecimal format.");
+            String hexString2 = scanner.nextLine();
+            getBinary(hexString2);
+            return Integer.valueOf(hexString2, 2);
+        }
+    }
 }
